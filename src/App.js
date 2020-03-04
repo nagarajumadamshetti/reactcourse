@@ -14,7 +14,6 @@ class App extends Component {
       username: event.target.value
     });
   }
-
   render() {
     
     return (
