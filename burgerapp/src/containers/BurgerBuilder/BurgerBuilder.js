@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Aux from '../../hoc/Aux';
+import Aux from '../../hoc/Auxiliary';
 
 import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
@@ -32,7 +32,6 @@ export default class BurgerBuilder extends Component {
         this.setState({
             totalPrice: newPrice,
             ingredients: updatedIngredients
-
         })
     }
     removeIngredientHandler = (type) => {
@@ -41,6 +40,7 @@ export default class BurgerBuilder extends Component {
             return;
         }
         const updatedCount = oldCount - 1;
+        console.log(updatedCount);
         const updatedIngredients = {
             ...this.state.ingredients
         };
@@ -51,7 +51,6 @@ export default class BurgerBuilder extends Component {
         this.setState({
             totalPrice: newPrice,
             ingredients: updatedIngredients
-
         })
     }
 
