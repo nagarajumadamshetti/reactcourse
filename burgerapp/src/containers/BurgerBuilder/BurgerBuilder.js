@@ -60,7 +60,7 @@ export default class BurgerBuilder extends Component {
         };
         for (let key in disabledInfo)
         {
-            disabledInfo[key]=disabledInfo[key]<=0
+            disabledInfo[key]=disabledInfo[key] <= 0
         }
         return (
             
@@ -69,7 +69,8 @@ export default class BurgerBuilder extends Component {
                 <BuildControls
                     ingredientAdded={this.addIngredientHandler}
                     ingredientRemoved={this.removeIngredientHandler}
-                    disabled={disabledInfo} />
+                    disabled={disabledInfo}
+                    price={this.state.totalPrice} />
             </Aux>
         );
     }
